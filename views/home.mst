@@ -1,20 +1,3 @@
-<h1>Seja Bem Vindo</h1>
-<p>qlq coisa ishauishai</p>
+{{> header}}
 
-{{#mostrar}}
-<p>Nome: {{nome}}, tem {{idade}} anos</p>
-{{/mostrar}}
-
-<ul>
-{{#ingredientes}}
-    <li>{{nome}} - {{qt}}</li>
-{{/ingredientes}}
-</ul>
-{{^ingredientes}}
-    <p>Não tem ingretientes.</p>
-{{/ingredientes}}
-<hr/>
-
-{{{teste}}}
-
-{{!comentario mustache}}
+<h1>Página Home</h1>

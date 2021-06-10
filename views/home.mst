@@ -10,3 +10,11 @@
     <li>{{nome}} - {{qt}}</li>
 {{/ingredientes}}
 </ul>
+{{^ingredientes}}
+    <p>Não tem ingretientes.</p>
+{{/ingredientes}}
+<hr/>
+
+{{{teste}}}
+
+{{!comentario mustache}}

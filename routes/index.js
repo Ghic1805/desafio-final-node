@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
         ingredientes: [
             {nome: 'Arroz', qt: '20kg'},
             {nome: 'Sorvete', qt: '200g'}
-        ]
+        ],
+        interesses: [ 'node', 'js', 'css'],
+        teste: '<strong>testando negrito</strong> '
     };
 
     res.render('home', obj);

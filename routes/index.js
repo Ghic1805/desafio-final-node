@@ -1,13 +1,10 @@
 
 const express = require('express');
+const homeController = require('../controllers/homeController');
+const userController = require('../controllers/userController');
 
 const router = express.Router();
-router.get('/', (req, res) => {
-    let obj = {
-        pageTitle: 'Titulo de teste'
-    };
-
-    res.render('home', obj);
-});
+router.get('/', homeController.index);
+router.get('/users/login', userController.login);
 
 module.exports = router;

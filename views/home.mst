@@ -2,4 +2,4 @@
 
 <h1>Página Home</h1>
 
-<p>Usuario Logado: {{userInfo.name}}</p>
+<p>Bem Vindo</p>

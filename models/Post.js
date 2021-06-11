@@ -5,7 +5,7 @@ const postSchema = new mongoose.Schema({
     title: {
         type: String,
         trim: true,
-        required: 'O post recisa de um titulo'
+        required: 'O post precisa de um titulo'
     },
     slug: String,
     body: {

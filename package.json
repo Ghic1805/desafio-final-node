@@ -13,8 +13,11 @@
   },
   "homepage": "https://github.com/Ghic1805/desafio-final-node#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
     "mongoose": "^5.12.13",
     "mustache-express": "^1.3.1"
   },

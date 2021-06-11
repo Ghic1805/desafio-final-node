@@ -1,2 +1,20 @@
+<html>
+<head>
+    {{#pageTitle}}
+    <title>{{pageTitle}}</title>
+    {{/pageTitle}}
+    {{^pageTitle}}
+    <title>{{h.defaultPagetitle}}</title>
+    {{/pageTitle}}
+</head>
+<body>
+
+
 <h1>Cabeçalho</h1>
+<hr/>
+<ul>
+    {{#h.menu}}
+    <li><a href="{{slug}}">{{nome}}</a></li>
+    {{/h.menu}}
+</ul>
 <hr/>

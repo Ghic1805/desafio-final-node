@@ -8,6 +8,7 @@ exports.add = (req, res) => {
 };
 
 exports.addAction = async (req, res) => {
+    req.body.tags = req.body.tags.split(',').map(t=>t.trim());
     const post = new Post(req.body);
 
     try{
@@ -38,7 +39,7 @@ exports.editAction = async (req, res) => {
     try{
     //procurar item enviado e pegar dados e atualizar
     const post = await Post.findOneAndUpdate(
-        {slug:req.params.slug},
+        {slug:req.params.slug}, 
          req.body,
          {
              new: true, //retornar o NOVO item atualizado

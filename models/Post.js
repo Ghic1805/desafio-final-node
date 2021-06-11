@@ -24,7 +24,6 @@ postSchema.pre('save', function(next){
         this.slug = slug(this.title, {lower:true});
     }
 
-    
     next();
 });
 

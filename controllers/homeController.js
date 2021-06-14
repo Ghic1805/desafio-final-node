@@ -11,16 +11,20 @@ exports.index = async (req, res) => {
     };
 
     responseJson.tag = req.query.t;
+    const postFilter = (typeof responseJson.tag != 'undefined') ? {tags:responseJson.tag} : {};
 
-    const tags = await Post.getTagsList();
+    const tagsPromise = Post.getTagsList();
+    const postsPromise = Post.find(postFilter);   
+    
+    const [tags, posts] = await Promise.all([tagsPromise, postsPromise]);
+
     for(let i in tags) {
         if(tags[i]._id == responseJson.tag) {
             tags[i].class = "selected";
         }
     }
-    responseJson.tags = tags;
 
-    const posts = await Post.find();
+    responseJson.tags = tags;    
     responseJson.posts= posts;
 
     res.render('home', responseJson);

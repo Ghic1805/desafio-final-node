@@ -20,7 +20,7 @@ exports.changePassword = (req, res) => {
         await req.user.save();
 
         req.flash('success', 'Senha alterada com sucesso!')
+        //3- Redirecionar para a HOME
         res.redirect('/');
     });
-    //3- Redirecionar para a HOME
 };
